@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt, a4paper]{} % Font size
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nolayout,es-nodecimaldot,es-tabla]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{nicefrac}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage[colorlinks = true]{hyperref} 
+\newcommand{\yds}{\qquad\text{y}\qquad}
+\DeclareMathOperator{\proy}{proy}
+\DeclareMathOperator{\dd}{d}
+\linespread{1.25}
+%
+\title{\begin{large}Álgebra  I\end{large}\\ Formulario de distancias} \author{Andrés Miniguano T. \\ e-mail: \href{mailto:andres.miniguano@epn.edu.ec}{andres.miniguano@epn.edu.ec} 
+   \and Milton Torres E. \\ e-mail: \href{mailto:milton.torres@epn.edu.ec}{milton.torres@epn.edu.ec} }   \date{\today}
+\begin{document}
+\abstract{En este documento se presentan las fórmulas de distancia entre el punto, la recta y el plano.}
+\maketitle
+\section*{Notación}En lo que sigue usaremos las letras del alfabeto \(a,b,c,\ldots$ para un punto en el espacio con coordenadas dadas por índices; es decir\begin{center}\( a=  \begin{pmatrix}  a_1 & a_2 & a_3 \end{pmatrix}.\)\end{center}\\Además, se usarán las letras del alfabeto griego para denotar escalares: \(\alpha, \beta, \gamma, \ldots\). \\ \noindent La única excepción a las reglas anteriores se dará con el vector\[ 	w=  \begin{pmatrix}  x & y & z\end{pmatrix}\]que indican los ejes horizontal, vertical y espacial.
+
+\section*{definiciones}
+\begin{itemize}
+\item\bf{Punto:} Es cualquier elemento del espacio, el cual consiste en una tripleta ordenada de números reales; es decir, un elemento de \( \R^3\). Por ejemplo, si \( a\in \R^3\), entonces lo escribiremos como\[a =\left( \begin{matrix}a_1 & a_2 & a_3\end{matrix}\right)\] \\ \item\textbf{Recta:} Dados dos puntos \(a\) y \(b\), una recta con vector director \(a\) y vector constante \(b\) consiste en todos los puntos de la forma\begin{equation*}t \,a + b;\end{equation*}aquí \(t\) es un número real. A esta recta la notamos como\[R: [\langle a\rangle + b].\]
+\item\textbf{Plano:} Dados un punto a y un escalar \alpha, un plano de vector normal \(a\) consiste en todos los puntos \(w\) que satisfacen$$a \cdot  w = a_1 x + a_2 y + a_3 z = alpha.$$Aquí \( \%cdot\) indica el producto punto entre \(a%\) y \(w\); y el plano se nota\[H: \, [ \langle a,w \rangle = \alpha ].\]
+\end{itemize}
+
+\section{Formulario}
+\begin{enumerate}[label = \textbf{\arabic*.}]
+\item[0.] \textbf{Distancia entre dos puntos:}  Para dos puntos \(a\) y \(b\), su distancia \( dd(a,b)\) es la norma de su resta:\[\dd(a,b)=\|a-b\|=\sqrt{a-b\cdota-b}=\sqrt{(a_1-b_1)^2+(a_2-b_2)^2+(a_3-b_3)^2}.\]
+\item	\textbf{Distancia entre un punto y una recta:} La distancia entre un punto \(a\) y la recta \( R: [\langle b\rangle +c] \) tiene dos fórmulas:\begin{itemize}
+\item\emph{Fórmula de proyección:}\[\dd\big(a,\,R:[\langleb\rangle+c]\big)=\left\|(a-c)-\dfrac{(a-c\cdotb}{\|b\|^2}b \right\| \]
+\item\emph{Fórmula del binormal:}\[\dd \big( a, \, R:[\langle b \rangle + c] \big) = \dfrac{ \big\|(a-c) \times b \big\|}{\| b \|} \]
+\end{itemize}
+\item	\textbf{Distancia entre un punto y un plano:} Si \(a\) es un punto y \(H:[\langle b,x\rangle = \alpha]\) un plano, entonces:\[\dd \big( a, \, H:[ \langle b,x \rangle = \alpha] \big) =\dfrac{ a \cdot b - \alpha }{ \|b\| }.\]
+\item \textbf{Distancia entre dos rectas:} Si  \( R:[\langle a \rangle + c] \) y  \( S: [\langle b \rangle + d]\) son dos rectas, entonces tenemos dos casos:\begin{itemize}
+\item\emph{Rectas paralelas:}\[ \dd \big(  R: [ \langle a \rangle + c ], \, S : [ \langle b \rangle + d ] \big) =\dfrac{ \big\| (c-d)  \times a \big\| }{ \| a  \| }\]\item\emph{Rectas que se cruzan:}\[\dd \big(  R: [ \langle a \rangle + c ], \, S : [ \langle b \rangle + d ] \big) 
+	=\dfrac{ \big| \det( c-d, a, b ) \big| }{ \| a\times b\| }.\]
+		\end{itemize}
+			
+\item 
+\textbf{Distancia
+ entre una recta y un
+  plano:} Para la recta \( R:%[\langle a \rangle + c] \) y el plano \( H: [\langle b,w\rangle=\alpha]\), entonces necesariamente su distancia no se anula si son paralelos con:
+\[\dd \big(  R: [ \langle a \rangle + c ], \, H : [ \langle b, w \rangle = \alpha ] \big) 
+=
+			\dfrac{c \cdot b - \alpha}{\|b\|} 		\]
+
+\item \textbf{Distancia entre dos planos:} Finalmente para los planos  \( H:[\langle a,w \rangle = \alpha] \) e  \( I: [\langle b,w\rangle=\beta]\):\
+[
+			\dd \big(  H: [ \langle a,w \rangle = \alpha ], \, I : [\langle b,w \rangle = \beta] \big) =\dfrac{ | \alpha - \beta | }{\|a\|}=\dfrac{|\alpha-\beta|}{ \sqrt{a_1^2 + a_2^2 + a_3^2} }.	]
+\end{enumerate}
+
+\section*{Nota}
+Las fórmulas anteriores se demuestran usando elementos del álgebra lineal y cálculo vectorial, puesto que en algunos casos basta plantear un problema de minimización, en otros sólo aplicar propiedades del determinante y proyecciones. Algo bastante interesante es que todas las fórmulas anteriores se basan en obtener la norma de un único elemento, dicho elemento viene dado por el siguiente teorema:
+\begin{teo}[Proyección sobre un conjunto cerrado, convexo y no vacío]
+Sea \(M \subseteq \R^3\) un conjunto cerrado, convexo y no vacío; entonces para todo \(a\in \R^3\) existe un único \(b\in M\) tal que$$\dd (a,b) = \inf\big\{ \dd(a,c): \, c \in M  \big\};\]a \(b\) se lo denomina la \emph{proyección de} \(a\) en \(M\) y se nota \( \proy_M a := b\).\end{teo}
+Notemos que este teorema nos permite afirmar que siempre existe un punto que optimiza la distancia entre un conjunto y otro punto.
+
+\end{doc}
