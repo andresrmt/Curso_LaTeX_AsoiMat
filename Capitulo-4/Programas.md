@@ -4,7 +4,7 @@ A continuación encontrarás enlaces a los repositorios donde se encuentran los 
 ## Atom
 https://atom.io
 
-## 'R'
+## R
 * Windows:
 https://cran.r-project.org/bin/windows/base/
 * Mac:
@@ -27,3 +27,6 @@ http://truben.no/latex/bibtex/
 
 ## Tables Generator
 http://www.tablesgenerator.com
+
+## MS Excel a LaTeX
+http://mirrors.ctan.org/support/excel2latex.zip
