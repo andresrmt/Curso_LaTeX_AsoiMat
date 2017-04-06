@@ -1,0 +1,4 @@
+# CLAVES
+* Curiosidad
+* Realista
+* Impaciente
