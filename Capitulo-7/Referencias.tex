@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{makeidx} % Este es el paquete a utilizarse
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[bookmarks=true,colorlinks=true,urlcolor=blue,linkcolor=blue,pdfstartview=FitB]{hyperref}
+
+%
+\renewcommand{\qedsymbol}{$\blacksquare$}
+%
+\theoremstyle{plain}%
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{prop}[thm]{Proposición}
+%
+\theoremstyle{definition}%
+\newtheorem{defn}{Definición}[section]
+%
+
+\makeindex
+
+\title{Referencias e índices}
+\author{Milton Torres}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Topología}
+\begin{defn}[Espacio topológico]\index{Espacio!topológico}
+	Una familia \(\mathcal{T}\) de partes de un conjunto \(X\) define una topología sobre \(X\) si las tres condiciones son verificadas:
+	\begin{enumerate}
+		\item El conjunto vacío \(\emptyset\) y el conjunto \(X\) pertenecen a \(\mathcal{T}\);
+		\item la intersección finita de elementos de \(\mathcal{T}\) pertenece a \(\mathcal{T}\); y
+		\item la reunión cualquiera de elementos de \(\mathcal{T}\) pertenece a \(\mathcal{T}\).
+	\end{enumerate}
+	Los elementos de \(\mathcal{T}\) son llamados \emph{conjuntos abiertos}, sus complementarios, \emph{cerrados}; y el espacio \((X, \mathcal{T})\), \emph{espacio topológico}.
+	\index{Conjunto!cerrado} \index{Conjunto!abierto}
+\end{defn}
+Esto se lo pude encontrar en \cite{VK1997}, o más precisamente en \cite[p.\,3]{VK1997}.
+
+
+\begin{defn}[Espacio métrico]\index{Espacio!métrico}
+	Un espacio métrico \((E, d_{E})\) está dado por un conjunto \(E\) dotado de una aplicación  \(d_E : E \times E \longrightarrow [0,+\infty[\), llamada \emph{distancia} o \emph{métrica}, que verifica las siguientes propiedades:
+	\begin{enumerate}
+		\item[D.1] \textbf{Simetría}: para todo \(x, y\in E\), \(d_{E}(x,y) = d_{E} (y,x)\).
+		\item[D.2] \textbf{Separabilidad}: \(d_{E}(x,y)=0\) si y solo si \(x=y\).
+		\item[D.3] \textbf{Desigualdad triangular}: para todo \(x, y, z\in E\),
+		\[
+			d_{E}(x,y)\leq d_{E}(x,z)+d_{E}(z,y).
+      		\]
+	\end{enumerate}
+	A los elementos de un espacio métrico se los denomina \emph{puntos}.
+\end{defn}
+
+
+\newpage
+\section{Continuidad y otros}
+\begin{prop}\index{Aplicación!continua}
+	Una aplicación \(f\) de \((E, d_E)\) en \((F,d_F)\) es continua si y solo sí para toda sucesión convergente \((x_n)_{n\in\mathbb{N}}\) de los elementos de \(E\) se tiene
+	\[
+		f \left(\lim_{n \to +\infty} x_n \right) = \lim_{n \to +\infty} f(x_n)
+	\]
+\end{prop}
+La verificación de este se lo apreciar en \cite{EK1989}. %Para referancia inteligente, me lleva directo a la refencia que estoy citando
+
+\begin{thm}[Teorema fundamental del cálculo]\index{Teorema!fundamental del cálculo}
+	Si \(f:[a,b]\longrightarrow \mathbb{R}\) es continua y si \(A(x)=\int_a^x\,f(t)\,dt\), entonces \(A'=f\). Es decir,
+	\[
+		A'_{+}(a)=f(a),\quad A'_{-}(b)=f(b)
+	\]
+	y para todo \(x \in ]a,b[\)
+	\[
+		A'(x)=f(x)
+	\]
+\end{thm}
+\begin{proof}
+ Esta demostración se la pude encontrar en \cite[pp.\,42--43]{GR2010}. %para citar con numero de pagina
+\end{proof}
+
+
+
+\nocite{TA2008,greenwade93} 
+\bibliographystyle{apalike} % plain, abbrv, alpha, apa
+\bibliography{Bibliografia}
+
+
+\printindex
+
+
+\newpage
+
+
+\end{document} 
