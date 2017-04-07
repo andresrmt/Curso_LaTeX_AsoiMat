@@ -1,0 +1,43 @@
+% Clase del documento
+\documentclass[a5paper, 12pt]{article}
+
+% Paquetes
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-nolayout, es-nodecimaldot, es-tabla]{babel}
+\usepackage[top=2cm, left=2cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, latexsym}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{url}
+\usepackage[colorlinks = true, filecolor=magenta, urlcolor=magenta,]{hyperref} 
+\usepackage{lipsum}
+
+% Comandos
+\parindent = 0mm
+
+\author{Milton Torres \and Andrés Mt}
+
+\title{Holi}
+
+\date{\today}
+
+
+\definecolor{db}{RGB}{0,128,128}
+\definecolor{dh}{RGB}{128,128,0}
+
+% Contenido
+\begin{document}
+	\maketitle
+
+	\lipsum
+	
+	
+\nocite{*}
+	\bibliographystyle{plain} % plain, abbrv, alpha, apa
+\bibliography{citas}
+	
+\end{document}
+
