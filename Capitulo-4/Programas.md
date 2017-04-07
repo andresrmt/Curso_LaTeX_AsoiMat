@@ -16,6 +16,7 @@ https://www.rstudio.com/products/rstudio/download/
 ## GitHub Desktop
 https://desktop.github.com
 
+
 # Enlaces de interés
 También incluimos uno que otro enlace que pueda interesarte:
 
@@ -24,6 +25,13 @@ http://detexify.kirelabs.org
 
 ## bibTeX Online Editor
 http://truben.no/latex/bibtex/
+
+## JabRef
+* Información:
+http://www.jabref.org
+
+* Descarga:
+https://www.fosshub.com/JabRef.html
 
 ## Tables Generator
 http://www.tablesgenerator.com
